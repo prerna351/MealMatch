@@ -1,0 +1,20 @@
+import React from 'react';
+import { InputBox } from '../InputBoxes/InputBoxComponent';
+import { Button } from '../buttons/Button';
+import { Heading } from '../Headings/Heading';
+
+export const OwnersDetailsForm = () => {
+  return (
+    <div className='w-full min-w-screen-sm md:min-w-[500px] md:max-w-screen-lg flex flex-col gap-5 p-10 shadow-md border '>
+      <div className='mb-5'>
+      <Heading heading={"Who own's the service?"} subHeading={"Fill in the details of the owner"}></Heading>  
+      </div>
+      <InputBox label={"Full Name*"} type={"text"} placeholder={""}></InputBox>
+      <InputBox label={"Mobile Number*"} type={"text"} placeholder={""}></InputBox>
+      <InputBox label={"Address*"} type={"text"} placeholder={""}></InputBox>
+      <div className='mt-6'>
+      <Button label={"Save & Continue"}></Button>
+      </div>
+    </div>
+  );
+}

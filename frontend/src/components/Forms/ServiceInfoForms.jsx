@@ -1,0 +1,131 @@
+import React, { useState } from 'react';
+import { Heading } from '../Headings/Heading';
+import { CheckBox } from '../InputBoxes/CheckBox';
+import { Button } from '../buttons/Button';
+
+export const ServiceInfoForms = () => {
+  const initialDaysState = {
+    Monday: false,
+    Tuesday: false,
+    Wednesday: false,
+    Thursday: false,
+    Friday: false,
+    Saturday: false,
+    Sunday: false,
+  };
+
+  const initialMealsState = {
+    Breakfast: false,
+    Lunch: false,
+    Dinner: false,
+  };
+
+  const [days, setDays] = useState(initialDaysState);
+  const [meals, setMeals] = useState(initialMealsState);
+  const [selectAllDays, setSelectAllDays] = useState(false);
+  const [selectAllMeals, setSelectAllMeals] = useState(false);
+
+  const handleDaysChange = (e) => {
+    const { name, checked } = e.target;
+    setDays((prevDays) => ({
+      ...prevDays,
+      [name]: checked,
+    }));
+  };
+
+  const handleMealsChange = (e) => {
+    const { name, checked } = e.target;
+    setMeals((prevMeals) => ({
+      ...prevMeals,
+      [name]: checked,
+    }));
+  };
+
+  const handleSelectAllDays = () => {
+    setSelectAllDays(!selectAllDays);
+    setDays((prevDays) => {
+      const updatedDays = {};
+      for (let day in prevDays) {
+        updatedDays[day] = !selectAllDays;
+      }
+      return updatedDays;
+    });
+  };
+
+  const handleSelectAllMeals = () => {
+    setSelectAllMeals(!selectAllMeals);
+    setMeals((prevMeals) => {
+      const updatedMeals = {};
+      for (let meal in prevMeals) {
+        updatedMeals[meal] = !selectAllMeals;
+      }
+      return updatedMeals;
+    });
+  };
+
+  return (
+    <div className="w-full min-w-screen-sm md:min-w-[500px] md:max-w-screen-lg flex flex-col gap-8 p-10 shadow-md border">
+      <div>
+        <Heading heading={"Working Days"} subHeading={"Check the days you provide service"} />
+        
+            
+            <div className="flex gap-3 justify-between mt-4">
+            <div className="flex flex-col  gap-2">
+                {Object.keys(initialDaysState).slice(0, 4).map((day) => (
+                <CheckBox
+                    key={day}
+                    label={day}
+                    name={day}
+                    checked={days[day]}
+                    onChange={handleDaysChange}
+                />
+                ))}
+            </div>
+            <div className="flex flex-col gap-2">
+                {Object.keys(initialDaysState).slice(4).map((day) => (
+                <CheckBox
+                    key={day}
+                    label={day}
+                    name={day}
+                    checked={days[day]}
+                    onChange={handleDaysChange}
+                />
+                ))}
+            </div>
+
+            <div
+            className="text-green-600 text-sm font-medium cursor-pointer "
+            onClick={handleSelectAllDays}
+            >
+            {selectAllDays ? 'Unselect All' : 'Select All'}
+            </div>
+            
+        </div>
+      </div>
+
+        <div>
+            <Heading heading={"Meal Timings"} subHeading={"Check the Timings of meal you provide"} />
+            <div className='flex justify-between  mt-4 '>
+                <div className='flex flex-col gap-3 '>
+                    {Object.keys(initialMealsState).map((meal) => (
+                        <CheckBox
+                        key={meal}
+                        label={meal}
+                        name={meal}
+                        checked={meals[meal]}
+                        onChange={handleMealsChange}
+                        />
+                    ))}
+                </div>
+                <div
+                    className="text-green-600 text-sm font-medium cursor-pointer"
+                    onClick={handleSelectAllMeals}
+                >
+                    {selectAllMeals ? 'Unselect All' : 'Select All'}
+                </div>
+            </div>
+        </div>
+        <Button label={"Save & Continue"}></Button>
+    </div>
+  );
+};
