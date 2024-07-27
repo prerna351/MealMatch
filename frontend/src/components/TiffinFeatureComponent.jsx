@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './Button';
+import { Button } from './buttons/Button';
 
 export const TiffinFeature = () => {
   return (
@@ -9,7 +9,7 @@ export const TiffinFeature = () => {
       {/* left  */}
         <div className="max-w-xl  flex flex-col gap-6  ">
             <div className='flex flex-col h-full justify-center items-center'>
-            <h1 className='text-5xl  text-center font-semibold text-gray-800 leading-snug mb-2 '>Join Our Platform as a Tiffin Service Provider</h1>
+            <h1 className='text-3xl md:text-5xl  text-center font-semibold text-gray-800 leading-snug mb-2 '>Join Our Platform as a Tiffin Service Provider</h1>
             <h4 className='text-xl text-gray-600 mb-9 '>Choose your type of service to get started</h4>
             </div>
         </div>
