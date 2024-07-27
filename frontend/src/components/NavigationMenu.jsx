@@ -6,7 +6,7 @@ import { currentFormState } from '../store/atoms/currentFormState';
 export const NavigationMenu = ({onClick}) => {
     const  setCurrentForm = useSetRecoilState(currentFormState)
   return (
-    <div className=''>
+    <div className='w-full'>
 
       <DetailsButtons 
       label={"Owner's Information"} 

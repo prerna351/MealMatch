@@ -34,23 +34,23 @@ export const Local = () => {
   }
   return (
     <>
-     <div className='w-screen flex justify-center  items-center p-10 '>
-      <div className='flex gap-6'>
+     <div className='w-screen flex justify-center  items-center md:p-10 px-4 py-10'>
+      <div className='flex  gap-6'>
         
-          <div className={`px-4 mt-5 ${showForm === false ? 'block' : 'hidden'} md:block flex flex-col justify-start`}>
+          <div className={`px-4 mt-5 ${showForm === false ? 'block' : 'hidden'} md:block flex flex-col justify-start w-screen md:w-auto`}>
             <NavigationMenu onClick={handleFormClick}/>
           </div>
         
           
-            <div className={`${showForm === true ? 'block' : 'hidden'} md:block flex flex-col md:flex-row`}>
-            <button
-              onClick={handleNavigationClick}
-              className='md:hidden w-16 mb-4 p-2 bg-white text-gray-900 flex justify-start '
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
-              <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
-            </svg>
-            </button>
+            <div className={`${showForm === true ? 'block' : 'hidden'} md:block flex flex-col md:flex-row  w-screen md:w-auto`}>
+              <button
+                onClick={handleNavigationClick}
+                className='md:hidden ml-1 w-16 mb-4 p-2 bg-white text-gray-900 flex justify-start '
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
+                <path fill-rule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clip-rule="evenodd" />
+              </svg>
+              </button>
             <div className='flex-1'>
               <FormDisplay />
             </div>

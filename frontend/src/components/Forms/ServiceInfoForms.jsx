@@ -64,7 +64,7 @@ export const ServiceInfoForms = () => {
   };
 
   return (
-    <div className="w-full min-w-screen-sm md:min-w-[500px] md:max-w-screen-lg flex flex-col gap-8 p-10 shadow-md border">
+    <div className="w-full md:min-w-[500px] flex flex-col gap-8 p-4 md:p-10 md:shadow-md md:border">
       <div>
         <Heading heading={"Working Days"} subHeading={"Check the days you provide service"} />
         
