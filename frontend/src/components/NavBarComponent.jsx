@@ -6,10 +6,10 @@ import { Avatar } from './Avatar';
 export const NavBar = () => {
   return (
     <>
-      <nav className="bg-white z-99 border-gray-200 border-b-2 ">
+      <nav className="bg-white border-gray-200 border-b-2 ">
         <div className="max-w-screen-xl flex  items-center  justify-between mx-auto p-4">
             <div>
-              <Link  to={"/"} ><span className="self-center text-2xl  font-semibold whitespace-nowrap dark:text-white">Flowbite</span></Link>
+              <Link  to={"/"} ><span className="self-center text-2xl  font-semibold whitespace-nowrap">Flat<span className='text-green-600'>Mate</span></span></Link>
             </div>
           <div className="flex items-center  space-x-3 ">
             
