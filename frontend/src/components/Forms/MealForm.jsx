@@ -58,8 +58,10 @@ export const MealForm = () => {
      {/***************** add meals image ****************/}
      <div className="max-h-[400px] flex justify-center ">
         <div className="w-full max-w-md mx-auto">
-          <Heading heading={"Upload Images"} subHeading={""}></Heading>
-          <ImageUploaderComp />
+          <div className='mb-auto md:mb-4'>
+            <Heading heading={"Upload Images"} subHeading={""}></Heading>
+          </div>
+            <ImageUploaderComp />
         </div>
       </div>
       
