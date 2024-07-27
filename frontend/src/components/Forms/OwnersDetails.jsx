@@ -5,7 +5,7 @@ import { Heading } from '../Headings/Heading';
 
 export const OwnersDetailsForm = () => {
   return (
-    <div className='w-full  md:min-w-[500px]  flex flex-col gap-5 p-4 md:p-10 md:shadow-md md:border '>
+    <div className='w-full  md:min-w-[500px]  flex flex-col gap-5 p-4 md:p-10 md:shadow-md md:border bg-white'>
       <div className='mb-5'>
       <Heading heading={"Who own's the service?"} subHeading={"Fill in the details of the owner"}></Heading>  
       </div>

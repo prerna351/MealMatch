@@ -6,6 +6,7 @@ import { currentFormState} from '../store/atoms/currentFormState';
 import { MealForm } from '../components/Forms/MealForm';
 import { NavigationMenu } from '../components/NavigationMenu';
 import { TermsForm } from '../components/Forms/TermsForm';
+import { NavBar } from '../components/NavBarComponent';
 
 const FormDisplay = () => {
   const currentForm = useRecoilValue(currentFormState);
@@ -33,8 +34,11 @@ export const Local = () => {
     setShowForm(true); //show form
   }
   return (
-    <>
-     <div className='w-screen flex justify-center  items-center md:p-10 px-4 py-10'>
+    <div className='overflow-x-clip'>
+      <div className='w-screen  bg-white sticky top-0 z-50'>
+          <NavBar></NavBar>
+        </div>
+     <div className='w-screen flex justify-center mt-10 bitems-center md:p-10 px-4 py-10'>
       <div className='flex  gap-6'>
         
           <div className={`px-4 mt-5 ${showForm === false ? 'block' : 'hidden'} md:block flex flex-col justify-start w-screen md:w-auto`}>
@@ -59,7 +63,7 @@ export const Local = () => {
           
         </div> 
      </div>
-    </>
+    </div>
   );
 }
 

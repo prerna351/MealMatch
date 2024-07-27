@@ -23,7 +23,7 @@ export const MealForm = () => {
 
 
   return (
-    <div className='w-full md:min-w-[500px] flex flex-col gap-8 p-4 md:p-10 md:shadow-md md:border '>
+    <div className='w-full md:min-w-[500px] flex flex-col gap-8 p-4 md:p-10 md:shadow-md md:border bg-white '>
      
      <div>
         <Heading heading={"Meal Type"} subHeading={"Do you provide pure veg food or both veg and non-veg?"}></Heading>

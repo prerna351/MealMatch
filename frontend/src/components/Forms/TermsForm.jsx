@@ -2,7 +2,7 @@ import React from 'react';
 
 export const TermsForm = () => {
   return (
-    <div className='w-full md:min-w-[500px] flex flex-col gap-8  p-4 md:p-10 md:shadow-md md:border h-[516px]'>
+    <div className='w-full md:min-w-[500px] flex flex-col gap-8  p-4 md:p-10 md:shadow-md md:border h-[516px] bg-white'>
       
     </div>
   );

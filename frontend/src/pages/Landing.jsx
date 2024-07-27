@@ -11,7 +11,7 @@ export const Landing = () => {
           <NavBar></NavBar>
         </div>
 
-        <div className='w-screen bg-green-400 mx-auto py-4 flex flex-col justify-center items-center  '>
+        <div className='w-screen mx-auto py-4 flex flex-col justify-center items-center  '>
           <div className=' max-w-3xl  flex flex-col mt-12 mx-6 md:mx-0 items-center gap-1 py-10'>
             <div className='bg-pink-200 text-center w-72 rounded-full px-2 py-1  font-medium'><p >Trusted & loved by million users</p></div>
             <div><h1 className='text-4xl md:text-6xl text-center font-semibold  mt-11 '>Find compatible flatmates Rooms & PGs</h1></div>
