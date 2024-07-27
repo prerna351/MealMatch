@@ -58,7 +58,7 @@ export const MealForm = () => {
      {/***************** add meals image ****************/}
      <div className="max-h-[400px] flex justify-center ">
         <div className="w-full max-w-md mx-auto">
-          <h1 className="text-2xl font-bold mb-6">Upload Images</h1>
+          <Heading heading={"Upload Images"} subHeading={""}></Heading>
           <ImageUploaderComp />
         </div>
       </div>
