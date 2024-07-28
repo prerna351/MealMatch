@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavBar } from '../components/NavBarComponent';
-import { TiffinFeature } from '../components/TiffinFeatureComponent';
-import { Search } from '../components/Search';
+import { GetStarted } from '../components/GetStarted';
+import { Search } from '../components/SearchBar/Search';
+
 
 export const Landing = () => {
   return (
@@ -22,7 +23,7 @@ export const Landing = () => {
         </div>
 
         <div className='relative w-screen flex flex-col py-28 justify-center items-center '>
-            <TiffinFeature></TiffinFeature>
+            <GetStarted />
         </div>
     </div>
   );
