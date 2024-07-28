@@ -2,6 +2,7 @@ import React from 'react';
 import { NavBar } from '../components/NavBarComponent';
 import { GetStarted } from '../components/GetStarted';
 import { Search } from '../components/SearchBar/Search';
+import { Link } from 'react-router-dom';
 
 
 export const Landing = () => {
@@ -18,7 +19,17 @@ export const Landing = () => {
             <div><h1 className='text-4xl md:text-6xl text-center font-semibold  mt-11 '>Find compatible flatmates Rooms & PGs</h1></div>
             <div className='mt-4 mb-7 text-gray-500 '><p>Share your room with right roommates</p></div>
             <div className='w-full '><Search></Search></div>
-            <div className='mt-1 text-gray-600 z-0'><span>Top cities:</span> <span>Banglore, Hyderabad</span></div>
+            <div className='mt-2 text-gray-600 z-0 flex items-center'>
+              <span className='mr-2'>Top cities:</span>
+              <Link to={'/city/Banglore'}><span className='text-gray-400 underline'>Banglore,</span></Link>
+              <Link to={'/city/Hyderabad'}><span className='mx-1.5 text-gray-400 underline'>Hyderabad,</span></Link>
+              <Link to={'/city/Pune'}><span className='text-gray-400 underline mr-2'>Pune</span></Link>
+              <Link to={'/city/all'}><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 text-green-600">
+                    <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+              </span>
+              </Link>
+              </div>
           </div>
         </div>
 
