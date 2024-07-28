@@ -4,6 +4,7 @@ import { Heading } from '../Headings/Heading';
 import { InputBox } from '../InputBoxes/InputBoxComponent';
 import { RadioButton } from '../InputBoxes/RadioButton';
 import { ImageUploaderComp } from '../InputBoxes/ImageUploaderComp';
+import { Button } from '../buttons/Button';
 
 export const MealForm = () => {
 
@@ -63,6 +64,10 @@ export const MealForm = () => {
           </div>
             <ImageUploaderComp />
         </div>
+      </div>
+
+      <div >
+      <Button label={"Save & Continue"}></Button>
       </div>
       
     </div>
