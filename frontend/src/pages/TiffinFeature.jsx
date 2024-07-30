@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavBar } from '../components/NavBarComponent';
-import { ProfileCard } from '../components/Profile/ProfileCard';
+import { ProfileCard } from '../components/Cards/ProfileCard';
 import { Rooms } from '../components/featureMenuIcons/Rooms';
 import { Roommates } from '../components/featureMenuIcons/Roommates';
 import { Pgs } from '../components/featureMenuIcons/Pgs';
 import { Tiffin } from '../components/featureMenuIcons/Tiffin';
-
+import axios from 'axios';
 import { FilterButton } from '../components/buttons/FilterButton';
 import { Search_basic } from '../components/SearchBar/Search_basic';
+import { useParams } from 'react-router-dom';
 
 export const TiffinFeature = () => {
+  const {city_name} = useParams();
+  // console.log(city_name)
+  const [providers, setProviders] = useState([]);
+
+  useEffect(() => {
+    //fetch details for profile card
+    const fetchDetials = async() => {
+      const response = await axios.get(`http://localhost:3000/api/providers/${city_name}`)
+      
+      setProviders(response.data);
+    }
+    fetchDetials();
+  },[city_name])
+
   return (
     <div className='overflow-x-clip'>
         <div className='w-screen bg-white sticky top-0 z-50'>
@@ -43,11 +58,18 @@ export const TiffinFeature = () => {
 
                 
                 <div className='profileCard mt-8  grid grid-cols-1 md:grid-cols-2 space-y-0 gap-6'>
-                  <ProfileCard></ProfileCard>
-                  <ProfileCard></ProfileCard>
-                  <ProfileCard></ProfileCard>
-                  <ProfileCard></ProfileCard>
-                  <ProfileCard></ProfileCard>
+                  {providers.map(provider => (
+                    <ProfileCard 
+                      key={provider.id}
+                      ownername = {provider.name}
+                      contact = {provider.contact}
+                      streetAddress = {provider.streetAddress}
+                      city = {provider.city}
+                      state = {provider.state}
+                      mealType = {provider.mealType}
+                      charges = {provider.charges}
+                    ></ProfileCard>
+                  ))}
                 </div>
             </div>
         </div>
@@ -56,12 +78,3 @@ export const TiffinFeature = () => {
 }
 
 
-/* <div className='flex flex-col  gap-4'>
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-        </div> */
