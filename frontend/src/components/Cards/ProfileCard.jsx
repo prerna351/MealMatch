@@ -1,6 +1,16 @@
 import React from 'react';
 
-export const ProfileCard = () => {
+export const ProfileCard = ({
+  key,
+  ownername, 
+  contact ,
+  streetAddress, 
+  city ,
+  state ,
+  mealType, 
+  charges 
+                      
+  }) => {
   return (
     <div className='relative bg-white shadow-md md:max-w-lg w-full max-w-screen-md max-h-56 rounded-lg flex-1 border transform scale-100 md:hover:scale-105 transition-transform duration-200 cursor-pointer'>
 
@@ -12,14 +22,18 @@ export const ProfileCard = () => {
 
         <div className="details rounded-tr-lg p-4 w-full flex flex-col justify-between border-dashed border-b border-gray-300 ">
           <div>
-            <p className='text-lg font-medium text-gray-700'>Neha</p>
-            <p className='text-xs text-gray-600'>Bajirao Road Narayan...</p>
+            <p className='text-lg font-medium text-gray-700'>{ownername}</p>
+            <p className='text-xs text-gray-600'>
+              <span>{streetAddress},</span>
+              <span className='ml-1'>{city},</span>
+              <span className='ml-1'>{state}</span>  
+            </p>
           </div>
 
           <div className='flex justify-between mt-4 md:mt-auto flex-wrap gap-4 md:gap-0'>
             <div className="mealtype flex flex-col ">
               <div className='text-xs text-gray-500'>Meal Type</div>
-              <div className='text-sm'>Both</div>
+              <div className='text-sm'>{mealType}</div>
             </div>
             <div className="rating flex flex-col ">
               <div className='text-xs text-gray-500'>rating</div>
@@ -32,7 +46,7 @@ export const ProfileCard = () => {
             </div>
             <div className="price flex flex-col ">
               <div className='text-xs text-gray-500'>Monthly</div>
-              <div className='text-sm'>$2300</div>
+              <div className='text-sm'>{charges}</div>
             </div>
           </div>
         </div>
