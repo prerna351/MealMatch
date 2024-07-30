@@ -11,7 +11,7 @@ export const FilterButton = () => {
         </button>
 
 
-        <div  class={`absolute z-10 ${showDropDown ? "block":"hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 `}>
+        <div  className={`absolute z-10 ${showDropDown ? "block":"hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 `}>
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
             <li>
                 <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
