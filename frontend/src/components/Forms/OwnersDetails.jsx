@@ -11,9 +11,13 @@ export const OwnersDetailsForm = () => {
       </div>
       <InputBox label={"Full Name*"} type={"text"} placeholder={""}></InputBox>
       <InputBox label={"Mobile Number*"} type={"text"} placeholder={""}></InputBox>
-      <InputBox label={"Address*"} type={"text"} placeholder={""}></InputBox>
+      <InputBox label={"Street Address*"} type={"text"} placeholder={"Enter Owner's address with pincode"}></InputBox>
+        <div className='w-full flex gap-4'>
+          <InputBox label={"City*"} type={"text"} placeholder={""}></InputBox>
+          <InputBox label={"State*"} type={"text"} placeholder={""}></InputBox>
+        </div>
       <div className='mt-6'>
-      <Button label={"Save & Continue"}></Button>
+      <Button label={"Save & Continue"} onClick={()=>{}}></Button>
       </div>
     </div>
   );
