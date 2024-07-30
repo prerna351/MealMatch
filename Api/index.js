@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 app.use(cors());
-const port = 3000;
+// const port = 3000;
 
 const cityData = {
     Bangalore: [
@@ -109,6 +109,6 @@ const cityData = {
     res.json(cityData);
   });
   
-  app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-  });
+  // app.listen(port, () => {
+  //   console.log(`Server running at http://localhost:${port}`);
+  // });
