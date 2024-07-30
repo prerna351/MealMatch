@@ -9,6 +9,7 @@ import axios from 'axios';
 import { FilterButton } from '../components/buttons/FilterButton';
 import { Search_basic } from '../components/SearchBar/Search_basic';
 import { useParams } from 'react-router-dom';
+import { API_URL } from '../config';
 
 export const TiffinFeature = () => {
   const {city_name} = useParams();
@@ -18,7 +19,7 @@ export const TiffinFeature = () => {
   useEffect(() => {
     //fetch details for profile card
     const fetchDetials = async() => {
-      const response = await axios.get(`http://localhost:3000/api/providers/${city_name}`)
+      const response = await axios.get(`${API_URL}api/providers/${city_name}`)
       
       setProviders(response.data);
     }

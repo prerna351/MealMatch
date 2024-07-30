@@ -1,0 +1,1 @@
+export const API_URL  = "https://meal-match-api.vercel.app/";
