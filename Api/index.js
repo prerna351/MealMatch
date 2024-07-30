@@ -107,7 +107,7 @@ const cityData = {
   });
   
   // Endpoint to fetch data for all cities
-  app.get('/api/providers', (req, res) => {
-    res.json(cityData);
-  });
+  // app.get('/api/providers', (req, res) => {
+  //   res.json(cityData);
+  // });
   
