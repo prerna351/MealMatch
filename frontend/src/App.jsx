@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing></Landing>}></Route>
-          <Route path="/city/:city-name" element={<TiffinFeature />}></Route>
+          <Route path="/city/:city_name" element={<TiffinFeature />}></Route>
           <Route path="/LocalProviderForm" element={<Local></Local>}></Route>
           <Route path="/city/all" element={<Cities></Cities>}></Route>
         </Routes>

@@ -13,17 +13,19 @@ import { API_URL } from '../config';
 
 export const TiffinFeature = () => {
   const {city_name} = useParams();
+  console.log(city_name)
   // console.log(city_name)
   const [providers, setProviders] = useState([]);
 
   useEffect(() => {
     //fetch details for profile card
-    const fetchDetials = async() => {
+    const fetchDetails = async() => {
+      console.log("hello1")
       const response = await axios.get(`${API_URL}api/providers/${city_name}`)
       
       setProviders(response.data);
     }
-    fetchDetials();
+    fetchDetails();
   },[city_name])
 
   return (
