@@ -23,13 +23,11 @@ export const Cities = () => {
                 <CityCard image_link={"/cities/hyderabad.jpg"} city_name={"Hyderabad"}/>
                 <CityCard image_link={"/cities/jaipur.jpg"} city_name={"Jaipur"}/>
                 <CityCard image_link={"/cities/kolkata.jpg"} city_name={"Kolkata"}/>
-                <CityCard image_link={"/cities/delhi.jpg"} city_name={"Delhi"}/>
+                {/* <CityCard image_link={"/cities/delhi.jpg"} city_name={"Delhi"}/>
                 <CityCard image_link={"/cities/jaipur.jpg"} city_name={"Jaipur"}/>
                 <CityCard image_link={"/cities/kolkata.jpg"} city_name={"Kolkata"}/>
-                <CityCard image_link={"/cities/delhi.jpg"} city_name={"Delhi"}/>
-                <CityCard image_link={"/cities/jaipur.jpg"} city_name={"Jaipur"}/>
-                <CityCard image_link={"/cities/kolkata.jpg"} city_name={"Kolkata"}/>
-                <CityCard image_link={"/cities/delhi.jpg"} city_name={"Delhi"}/>
+                <CityCard image_link={"/cities/delhi.jpg"} city_name={"Delhi"}/> */}
+                
                 
                </div>
 

@@ -21,7 +21,7 @@ export const Landing = () => {
             <div className='w-full '><Search></Search></div>
             <div className='mt-2 text-gray-600 z-0 flex items-center'>
               <span className='mr-2'>Top cities:</span>
-              <Link to={'/city/Banglore'}><span className='text-gray-400 underline'>Banglore,</span></Link>
+              <Link to={'/city/Bangalore'}><span className='text-gray-400 underline'>Bangalore,</span></Link>
               <Link to={'/city/Hyderabad'}><span className='mx-1.5 text-gray-400 underline'>Hyderabad,</span></Link>
               <Link to={'/city/Pune'}><span className='text-gray-400 underline mr-2'>Pune</span></Link>
               <Link to={'/city/all'}><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 text-green-600">
