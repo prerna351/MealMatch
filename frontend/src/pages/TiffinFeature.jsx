@@ -6,7 +6,7 @@ import { Roommates } from '../components/featureMenuIcons/Roommates';
 import { Pgs } from '../components/featureMenuIcons/Pgs';
 import { Tiffin } from '../components/featureMenuIcons/Tiffin';
 import axios from 'axios';
-import { FilterButton } from '../components/buttons/FilterButton';
+import { FilterMenuButton } from '../components/buttons/FilterMenuButton';
 import { Search_basic } from '../components/SearchBar/Search_basic';
 import { useParams } from 'react-router-dom';
 import { API_URL } from '../config';
@@ -19,12 +19,17 @@ export const TiffinFeature = () => {
 
   useEffect(() => {
     //fetch details for profile card
-    const fetchDetails = async() => {
-      console.log("hello1")
-      const response = await axios.get(`${API_URL}api/providers/${city_name}`)
-      
-      setProviders(response.data);
-    }
+    const fetchDetails = async () => {
+      try {
+        console.log("Fetching details...");
+        const response = await axios.get(`${API_URL}/api/providers/${city_name}`);
+        setProviders(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Failed to fetch data. Please try again later.");
+      }
+    };
+
     fetchDetails();
   },[city_name])
 
@@ -53,7 +58,7 @@ export const TiffinFeature = () => {
                     <div className="search col-span-1  mt-4">
                       <div className='flex  h-full items-center justify-end gap-5'>
                           <Search_basic></Search_basic>
-                          <FilterButton/>
+                          <FilterMenuButton/>
                       </div>
                     </div>
                   </div>
@@ -64,6 +69,7 @@ export const TiffinFeature = () => {
                   {providers.map(provider => (
                     <ProfileCard 
                       key={provider.id}
+                      id={provider.id}
                       ownername = {provider.name}
                       contact = {provider.contact}
                       streetAddress = {provider.streetAddress}
