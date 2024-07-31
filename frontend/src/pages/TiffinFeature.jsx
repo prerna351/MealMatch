@@ -26,7 +26,6 @@ export const TiffinFeature = () => {
         setProviders(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError("Failed to fetch data. Please try again later.");
       }
     };
 
