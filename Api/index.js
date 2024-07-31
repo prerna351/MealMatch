@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-app.use(cors({
-  origin: 'https://meal-match-eight.vercel.app' // Replace with your frontend URL
-}));
+// const port = 3000;
 
+app.use(cors({
+  origin: 'https://meal-match-eight.vercel.app', // Your frontend URL
+  methods: 'GET',
+  allowedHeaders: 'Content-Type, Authorization',
+}));
 
 const cityData = {
     Bangalore: [
@@ -106,8 +109,13 @@ const cityData = {
     }
   });
   
-  // Endpoint to fetch data for all cities
+  // // Endpoint to fetch data for all cities
   // app.get('/api/providers', (req, res) => {
   //   res.json(cityData);
   // });
+
+  // app.listen(port, () => {
+  //   console.log(`Server running at http://localhost:${port}`);
+  // });
   
+ module.exports = app;
