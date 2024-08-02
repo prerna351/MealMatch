@@ -5,9 +5,11 @@ import { InputBox } from '../InputBoxes/InputBoxComponent';
 import { RadioButton } from '../InputBoxes/RadioButton';
 import { ImageUploaderComp } from '../InputBoxes/ImageUploaderComp';
 import { Button } from '../buttons/Button';
+import { useSetRecoilState } from 'recoil';
+import { currentFormState } from '../../store/atoms/currentFormState';
 
 export const MealForm = () => {
-
+  const setForm = useSetRecoilState(currentFormState)
   const mealTypesState = {
     Vegetarian: false,
     "Both (as per customer demand)": false
@@ -67,7 +69,7 @@ export const MealForm = () => {
       </div>
 
       <div >
-      <Button label={"Save & Continue"}></Button>
+      <Button label={"Save & Continue"} onClick={()=>{setForm('TermsForm')}}></Button>
       </div>
       
     </div>

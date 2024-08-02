@@ -6,6 +6,7 @@ import { Local } from "./pages/Local"
 import { RecoilRoot } from "recoil"
 import { TiffinFeature } from "./pages/TiffinFeature"
 import { Cities } from "./pages/Cities"
+import { ProfilePage } from "./pages/ProfilePage"
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/city/:city_name" element={<TiffinFeature />}></Route>
           <Route path="/LocalProviderForm" element={<Local></Local>}></Route>
           <Route path="/city/all" element={<Cities></Cities>}></Route>
+          <Route path="/provider/:id" element={<ProfilePage/>}></Route>
         </Routes>
       </BrowserRouter>
     </RecoilRoot>

@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Heading } from '../Headings/Heading';
 import { CheckBox } from '../InputBoxes/CheckBox';
 import { Button } from '../buttons/Button';
+import { useSetRecoilState } from 'recoil';
+import { currentFormState } from '../../store/atoms/currentFormState';
 
 export const ServiceInfoForms = () => {
+  const setForm = useSetRecoilState(currentFormState)
   const initialDaysState = {
     Monday: false,
     Tuesday: false,
@@ -125,7 +128,7 @@ export const ServiceInfoForms = () => {
                 </div>
             </div>
         </div>
-        <Button label={"Save & Continue"}></Button>
+        {days && meals ?  <Button label={"Save & Continue"} onClick={()=>{setForm('MealForm')}}></Button> :  <Button label={"Save & Continue"} onClick={()=>{setForm('MealForm')}}></Button>}
     </div>
   );
 };

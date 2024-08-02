@@ -2,6 +2,7 @@ import React from 'react';
 
 export const ProfileCard = ({
   key,
+  id,
   ownername, 
   contact ,
   streetAddress, 
@@ -12,7 +13,7 @@ export const ProfileCard = ({
                       
   }) => {
   return (
-    <div className='relative bg-white shadow-md md:max-w-lg w-full max-w-screen-md max-h-56 rounded-lg flex-1 border transform scale-100 md:hover:scale-105 transition-transform duration-200 cursor-pointer'>
+    <div  className='relative bg-white shadow-md md:max-w-lg w-full max-w-screen-md max-h-56 rounded-lg flex-1 border transform scale-100 md:hover:scale-105 transition-transform duration-200 cursor-pointer'>
 
       <div className="top max-h-44 flex rounded-tr-lg">
 

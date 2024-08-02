@@ -14,7 +14,7 @@ export const ownerDetailsAtom = atom({
   },
 });
 
-import { atom } from 'recoil';
+
 
 export const mealDetailsAtom = atom({
   key: 'mealDetailsAtom', // unique ID for this atom
