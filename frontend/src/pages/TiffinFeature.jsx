@@ -28,7 +28,7 @@ export const TiffinFeature = () => {
       </div>
       
       <div className='w-full h-screen px-6 md:px-10 flex justify-center'>
-        <div className='mt-5 w-full max-w-[1100px] h-screen'>
+        <div className='mt-5 w-full max-w-[1100px] h-screen '>
           <div className='navMenu'>
             <div className="page hidden md:block text-gray-400 text-sm">Home / Tiffin / {city_name}</div>
             <div className="panel grid grid-cols-1 lg:grid-cols-2">
@@ -52,7 +52,8 @@ export const TiffinFeature = () => {
           <div className='profileCard mt-8 grid grid-cols-1 md:grid-cols-2 space-y-0 gap-6'>
             {providers.length > 0 ? (
               providers.map(provider => (
-                <Link to={`/provider/${provider.id}`}><ProfileCard 
+                <Link to={`/city/${city_name}/${provider.id}`}>
+                  <ProfileCard 
                   key={provider.id}
                   id={provider.id}
                   ownername={provider.name}
@@ -62,6 +63,7 @@ export const TiffinFeature = () => {
                   state={provider.state}
                   mealType={provider.mealType}
                   charges={provider.charges}
+                  ratings={provider.ratings}
                 /></Link>
               ))
             ) : (

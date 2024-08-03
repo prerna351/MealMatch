@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 export const Landing = () => {
+  
   return (
     <div className='overflow-x-clip'>
 
@@ -41,9 +42,4 @@ export const Landing = () => {
 }
 
 
-      // <div className="h-screen overflow-hidden ">
-      //     <NavBar></NavBar>
-      //   <div className="flex justify-center items-center bg-gray-50 h-full  ">
-      //   {/* <TiffinFeature></TiffinFeature> */}
-      //   </div>
-      // </div>
+ 

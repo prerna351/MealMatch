@@ -21,7 +21,7 @@ function App() {
           <Route path="/city/:city_name" element={<TiffinFeature />}></Route>
           <Route path="/LocalProviderForm" element={<Local></Local>}></Route>
           <Route path="/city/all" element={<Cities></Cities>}></Route>
-          <Route path="/provider/:id" element={<ProfilePage/>}></Route>
+          <Route path="/city/:city_name/:provider_id" element={<ProfilePage/>}></Route>
         </Routes>
       </BrowserRouter>
     </RecoilRoot>

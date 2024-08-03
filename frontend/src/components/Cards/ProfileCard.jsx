@@ -9,7 +9,8 @@ export const ProfileCard = ({
   city ,
   state ,
   mealType, 
-  charges 
+  charges,
+  ratings 
                       
   }) => {
   return (
@@ -18,7 +19,7 @@ export const ProfileCard = ({
       <div className="top max-h-44 flex rounded-tr-lg">
 
         <div className="photo flex-1 rounded-tl-lg max-w-40 min-w-36 overflow-clip">
-          <img className=" object-contain " src="/2024072798945559844.webp" alt="image description"/>
+          <img className=" object-contain " src="/food/image1.jpg" alt="image description"/>
         </div>
 
         <div className="details rounded-tr-lg p-4 w-full flex flex-col justify-between border-dashed border-b border-gray-300 ">
@@ -38,7 +39,7 @@ export const ProfileCard = ({
             </div>
             <div className="rating flex flex-col ">
               <div className='text-xs text-gray-500'>rating</div>
-              <div className='flex items-center text-sm'><p>5</p>
+              <div className='flex items-center text-sm'><p>{ratings}</p>
                 <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5 text-yellow-500 ml-1">
                   <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
                   </svg>

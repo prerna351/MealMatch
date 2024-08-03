@@ -8,8 +8,8 @@ export const NavBar = () => {
     <>
       <nav className="bg-white border-gray-200 border-b-2 ">
         <div className="w-full max-w-[1114px] px-6 md:pl-10 md:pr-14 lg:pr-4 lg:pl-0  flex  items-center  justify-between mx-auto py-4">
-            <div>
-              <Link  to={"/"} ><span className="self-center text-2xl  font-semibold whitespace-nowrap">Flat<span className='text-green-600'>Mate</span></span></Link>
+            <div className='text-lg md:text-2xl  font-semibold'>
+              <Link  to={"/"} ><span className="self-center  whitespace-nowrap">Flat<span className='text-green-600'>Mate</span></span></Link>
             </div>
           <div className="flex items-center  space-x-3 ">
             
