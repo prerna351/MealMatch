@@ -4,8 +4,8 @@
 <!-- add different profile image -->
 <!-- hardcode meals photos -->
 <!-- add functionality to save & continue button  -->
+<!-- use recoil to set the city details in the atom and then reflect it on other pages -->
 
-<!-- build detail profile page of providers -->
 <!-- least priority- rebuild the layout of landing page -->
 
 
@@ -14,3 +14,4 @@
 <!-- make the form responsive -->
 <!-- fix backend deployment removed api and hardcoded data on the frontend -->
 <!-- hard code more data -->
+<!-- build detail profile page of providers -->
