@@ -23,7 +23,7 @@ const Carousel = () => {
         <div className="carousel-inner flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
           {slides.map((slide, index) => (
             <div key={slide.id} className="carousel-item flex-none w-full">
-              <img src={slide.image} alt={`Slide ${index + 1}`} className="w-full rounded-md max-h-[250px] md:h-[500px] object-contain" />
+              <img src={slide.image} alt={`Slide ${index + 1}`} className="w-full rounded-md max-h-[250px] md:max-h-[500px] object-contain" />
             </div>
           ))}
 
