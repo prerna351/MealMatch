@@ -22,8 +22,8 @@ export const Search_basic = () => {
                     </svg>
                     
                     {/* filter icon  */}
-                    <div onClick={handleFilterClick} className='absolute top-1.5 right-3 rounded-full w-8 h-8 border border-gray-300 flex justify-center items-center'>
-                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className=" text-gray-700" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+                    <div onClick={handleFilterClick} className='block md:hidden absolute top-1.5 right-3 rounded-full w-8 h-8 border border-gray-300 flex justify-center items-center'>
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className=" text-gray-700 " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
                     </div>
                     
                     {showFilter && 

@@ -9,6 +9,7 @@ import { FilterMenuButton } from '../components/buttons/FilterMenuButton';
 import { Search_basic } from '../components/SearchBar/Search_basic';
 import { cityData } from '../data';
 import { Link, useParams } from 'react-router-dom';
+import { SortButton } from '../components/buttons/SortButton';
 
 export const TiffinFeature = () => {
   const { city_name } = useParams();
@@ -40,10 +41,11 @@ export const TiffinFeature = () => {
                   <Tiffin />
                 </div>
               </div>
-              <div className="search col-span-1 mt-4">
-                <div className='flex h-full items-center justify-end gap-5'>
+              <div className="search col-span-1 mt-4  mr-6">
+                <div className='flex h-full items-center justify-end gap-3'>
                   <Search_basic />
                   <FilterMenuButton />
+                  <SortButton></SortButton>
                 </div>
               </div>
             </div>

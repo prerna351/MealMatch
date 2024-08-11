@@ -13,17 +13,14 @@ export const FilterMenuButton = () => {
 
         <div  className={`absolute z-10 ${showDropDown ? "block":"hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 `}>
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+            <li className='block px-4 py-2 hover:bg-gray-100'>
+                Veg
             </li>
-            <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Settings</a>
+            <li className='block px-4 py-2 hover:bg-gray-100'>
+                {"Both (veg & non-veg)"}
             </li>
-            <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Earnings</a>
-            </li>
-            <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Sign out</a>
+            <li className='block px-4 py-2 hover:bg-gray-100'>
+                
             </li>
             </ul>
         </div>
