@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { InputBox } from '../InputBoxes/InputBoxComponent';
 import { Button } from '../buttons/Button';
 import { Heading } from '../Headings/Heading';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { currentFormState } from '../../store/atoms/currentFormState';
 import { ownerDetailsAtom } from '../../store/atoms/FormsState';
 
@@ -10,17 +10,17 @@ export const OwnersDetailsForm = () => {
   const setForm = useSetRecoilState(currentFormState)
   // State for input fields
   const [ownerDetails, setOwnerDetails] = useRecoilState(ownerDetailsAtom);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  
 
 
   // Validate input fields
-  useEffect(() => {
-    if (fullName && mobileNumber && streetAddress && city && state) {
-      setIsButtonDisabled(false);
-    } else {
-      setIsButtonDisabled(true);
-    }
-  }, [fullName, mobileNumber, streetAddress, city, state]);
+  // useEffect(() => {
+  //   if (fullName && mobileNumber && streetAddress && city && state) {
+  //     setIsButtonDisabled(false);
+  //   } else {
+  //     setIsButtonDisabled(true);
+  //   }
+  // }, [fullName, mobileNumber, streetAddress, city, state]);
 
   return (
     <div className='w-full  md:min-w-[500px]  flex flex-col gap-5 p-4 md:p-10 md:shadow-md md:border bg-white'>
@@ -35,7 +35,7 @@ export const OwnersDetailsForm = () => {
           <InputBox label={"State*"} type={"text"} placeholder={""}></InputBox>
         </div>
         <div className='mt-6'>
-        <Button label={"Save & Continue"} onClick={() => setForm('ServiceForm')} disabled={isButtonDisabled} />
+        <Button label={"Save & Continue"} onClick={() => setForm('ServiceForm')}  />
       </div>
     </div>
   );
